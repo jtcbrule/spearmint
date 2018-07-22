@@ -8,5 +8,5 @@ Mint-like distro
 - `wget https://raw.githubusercontent.com/jtcbrule/spearmint/master/bionic.sh`
 - Review the contents of `bionic.sh`
 - `sudo bash bionic.sh`
-- Reboot (`shutdown -r now`)
+- Reboot (`sudo shutdown -r now`)
 
