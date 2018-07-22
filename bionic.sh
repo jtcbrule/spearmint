@@ -5,7 +5,7 @@ if ! [ $(id -u) = 0 ]; then
     exit 1
 fi
 
-# base system
+# desktop environment
 apt-get update
 apt-get -y install slick-greeter cinnamon-core
 
@@ -14,9 +14,10 @@ mv /etc/netplan/01-netcfg.yaml /etc/netplan/01-netcfg.yaml-old
 mv /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf-old
 touch /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
 
-# miscellaneous utilities
+# gtk bookmark file
 apt-get -y install xdg-user-dirs-gtk
-apt-get -y install gnome-screenshot
+
+# login window settings
 apt-get -y install lightdm-settings
 
 # fonts
@@ -24,6 +25,9 @@ apt-get -y install fonts-liberation fonts-noto
 
 # sounds
 apt-get -y sound-theme-freedesktop
+
+# screenshot utility
+apt-get -y install gnome-screenshot
 
 # printer support
 apt-get -y install cups system-config-printer
@@ -46,7 +50,22 @@ apt-get -y install firefox
 # webcam
 apt-get -y cheese
 
-# theme
+# cursor
 apt-get -y install dmz-cursor-theme
-gsettings set org.cinnamon.desktop.interface cursor-theme "DMZ-White"
+# TODO set cursor from command line
+
+# command line utilities
+apt-get -y install git
+apt-get -y install apt-listchanges
+
+# mint-y theme
+git clone https://github.com/jtcbrule/spearmint.git
+cp -r spearmint/icons/. /usr/share/cinnamon/icons
+cp -r spearmint/themes/. /usr/share/cinnamon/themes
+# TODO set theme and icons from command line
+
+# cleanup
+if [ -f spearmint/bionic.sh ]; then
+    rm $0
+fi
 
