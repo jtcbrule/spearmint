@@ -5,8 +5,9 @@ if ! [ $(id -u) = 0 ]; then
     exit 1
 fi
 
-# desktop environment
 apt-get update
+
+# desktop environment
 apt-get -y install slick-greeter cinnamon-core
 
 # hack to fix network management
@@ -24,7 +25,7 @@ apt-get -y install lightdm-settings
 apt-get -y install fonts-liberation fonts-noto
 
 # sounds
-apt-get -y sound-theme-freedesktop
+apt-get -y install sound-theme-freedesktop
 
 # screenshot utility
 apt-get -y install gnome-screenshot
@@ -48,7 +49,7 @@ apt-get -y install vlc
 apt-get -y install firefox
 
 # webcam
-apt-get -y cheese
+apt-get -y install cheese
 
 # cursor
 apt-get -y install dmz-cursor-theme
@@ -60,8 +61,8 @@ apt-get -y install apt-listchanges
 
 # mint-y theme
 git clone https://github.com/jtcbrule/spearmint.git
-cp -r spearmint/icons/. /usr/share/cinnamon/icons
-cp -r spearmint/themes/. /usr/share/cinnamon/themes
+cp -r spearmint/icons/. /usr/share/icons
+cp -r spearmint/themes/. /usr/share/themes
 # TODO set theme and icons from command line
 
 # cleanup
