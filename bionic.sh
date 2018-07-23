@@ -18,6 +18,9 @@ touch /usr/lib/NetworkManager/conf.d/10-globally-managed-devices.conf
 # gtk bookmark file
 apt-get -y install xdg-user-dirs-gtk
 
+# font viewer
+apt-get -y install gnome-font-viewer
+
 # login window settings
 apt-get -y install lightdm-settings
 
