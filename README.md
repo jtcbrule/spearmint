@@ -10,3 +10,7 @@ Mint-like distro
 - `sudo bash bionic.sh`
 - Reboot (`sudo shutdown -r now`)
 
+## TODO
+
+Consider additional packages/replacements from https://packages.ubuntu.com/bionic/cinnamon-desktop-environment
+
