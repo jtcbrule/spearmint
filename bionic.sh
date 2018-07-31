@@ -33,6 +33,12 @@ apt-get -y install sound-theme-freedesktop
 # screenshot utility
 apt-get -y install gnome-screenshot
 
+# system monitor
+apt-get -y install gnome-system-monitor
+
+# dialog boxes from shell scripts
+apt-get -y install zenity
+
 # printer support
 apt-get -y install cups system-config-printer
 
