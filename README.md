@@ -1,6 +1,12 @@
 # Spearmint
 
-Mint-like distro
+Mint-like distribution. Guidelines:
+
+- Depends only on the contents of this git repository and Ubuntu LTS packages
+    - May consider creating versions for other Linux distributions (e.g. Debian)
+- Cinnamon desktop environment
+    - Avoid apps with GNOME-style client-side decorations
+- Lightweight, easily customizable
 
 ## Installation
 
@@ -12,5 +18,5 @@ Mint-like distro
 
 ## TODO
 
-Consider additional packages/replacements from https://packages.ubuntu.com/bionic/cinnamon-desktop-environment
+Organize the `bionic.sh` script
 
